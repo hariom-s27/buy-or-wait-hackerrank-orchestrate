@@ -1,0 +1,77 @@
+{
+  "metrics_a": {
+    "n": 25,
+    "status_exact": 20,
+    "method_exact": 21,
+    "plan_exact": 20,
+    "earliest_exact": 18,
+    "mean_days_off": 9.466666666666667,
+    "spending_exact": 22,
+    "spending_set_match": 22,
+    "exact_amt": 3,
+    "tol_1pct": 5,
+    "tol_2pct": 8,
+    "tol_5pct": 12,
+    "tol_10pct": 14,
+    "median_rel_err": 0.06428796396281952,
+    "explanation_consistent_count": 25
+  },
+  "metrics_b": {
+    "n": 25,
+    "status_exact": 19,
+    "method_exact": 20,
+    "plan_exact": 19,
+    "earliest_exact": 18,
+    "mean_days_off": 11.533333333333333,
+    "spending_exact": 22,
+    "spending_set_match": 22,
+    "exact_amt": 3,
+    "tol_1pct": 5,
+    "tol_2pct": 8,
+    "tol_5pct": 12,
+    "tol_10pct": 14,
+    "median_rel_err": 0.06428796396281952,
+    "explanation_consistent_count": 25
+  },
+  "changed_rids": [
+    "request_11"
+  ],
+  "changes_detail": [
+    {
+      "request_id": "request_11",
+      "changed_columns": [
+        "affordability_status",
+        "recommended_payment_method",
+        "payment_plan",
+        "earliest_date_for_full_payment",
+        "spending_changes_needed",
+        "decision_explanation"
+      ],
+      "system_a": {
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "full_payment",
+        "payment_plan": "2025-05-03:13110000",
+        "earliest_date_for_full_payment": "2025-06-15",
+        "spending_changes_needed": "stop:event_949|reduce_to:event_989:665950",
+        "decision_explanation": "With the listed spending changes, pay IDR 13,110,000 today. This leaves at least IDR 34,140,600 available over the next 90 days."
+      },
+      "system_b": {
+        "affordability_status": "affordable_later",
+        "recommended_payment_method": "wait",
+        "payment_plan": "2025-05-15:13110000",
+        "earliest_date_for_full_payment": "2025-05-15",
+        "spending_changes_needed": "none",
+        "decision_explanation": "Pay IDR 13,110,000 in full on 2025-05-15. Paying earlier would take the balance below the IDR 34,140,600 minimum."
+      },
+      "truth": {
+        "affordability_status": "affordable_with_plan",
+        "recommended_payment_method": "full_payment",
+        "payment_plan": "2025-05-03:13110000",
+        "earliest_date_for_full_payment": "2025-07-15",
+        "spending_changes_needed": "reduce_to:event_989:665950",
+        "decision_explanation": "Reduce the weekend food delivery to IDR 665,950, then pay IDR 13,110,000 today. This leaves at least IDR 34,140,600 available."
+      }
+    }
+  ],
+  "validator_violations": 0
+}

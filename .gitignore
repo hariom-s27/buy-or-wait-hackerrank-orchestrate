@@ -1,0 +1,17 @@
+log.txt
+.env
+.venv/
+__pycache__/
+*.pyc
+.cache/
+output_v*.csv
+code.zip
+.pytest_temp/
+.DS_Store
+
+# Keep only the curated evaluation reports referenced in README.md;
+# exclude the noisy per-run dated baseline logs.
+evaluation/results/*
+!evaluation/results/ablations.md
+!evaluation/results/featherless_integration_comparison.md
+!evaluation/results/images.md
